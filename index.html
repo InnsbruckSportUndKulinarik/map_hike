@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Wanderrouten in Innsbruck und Umgebung</title>
+    <title>Mountainbike Routen in Innsbruck und Umgebung</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="icons/start.png" type="image/x-icon">
 
@@ -34,6 +34,15 @@
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
     <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
 
+     <!--Leaflet Marker Cluster-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" integrity="sha512-6ZCLMiYwTeli2rVh3XAPxy3YoR5fVxGdH/pz+KMCzRY2M65Emgkw00Yqmhh8qLGeYQ3LbVZGdmOX9KUjSKr0TA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!--Leaflet Minimap-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js" integrity="sha512-ceQPs2CHke3gSINLt/JV37W1rfJOM64yuH999hnRhTP7tNtcSBp5hlTKhn8CEIhsFweSBrZMPVotAKjoyxGWNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css" integrity="sha512-efbAfGnrnjA+hLwOLu91W034fBGPsMwZMVCTwLUI2PDX/m7rOiuhYZ+D2mZ8rKcpC/I/7pdgoL8T4eYvMHNoQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
     <!--Leaflet Rainviewer-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.css" />
     <script src="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.js"></script>
@@ -47,24 +56,24 @@
 <body>
     <main>
         <header>
-            <h2><i class="fa-solid fa-person-biking"></i>Wandern rund um Innsbruck</h2>
+            <h2><i class="fa-solid fa-person-biking"></i> Mountainbiken rund um Innsbruck</h2>
             <nav>
                 <i class="fab fa-github"></i> <a href="https://github.com/InnsbruckSportUndKulinarik/map_mtb">Github</a>
             </nav>
         </header>
         <article>
-            <p>Auf dieser Karte finden Sie alles, was das Herz eines Wanbderes begehrt. Von eher ...... </p>
+            <p>Auf dieser Karte finden Sie alles, was das Herz eines Mountainbikers begehrt. Von eher ...... </p>
             <div id="map"></div>
             <div id="profile"></div>
 
-            <h3>Sicherheitshinweise für das Wandern</h3>
+            <h3>Sicherheitshinweise für das Mountainbiken</h3>
             <p>......</p>
 
         </article>
         <footer>
             <strong>Datenquellen:</strong>
             <nav>
-                <a href="https://www.innsbruck.info/wandern.html">Innsbruck Info: Wander
+                <a href="https://www.innsbruck.info/radsport/mountainbike/mountainbike-touren.html">Innsbruck Info: MTB
                     Touren</a> |
                 <a href="https://welcome.openstreetmap.org/working-with-osm-data/downloading-and-using/">Open Street Map
                     Daten</a> |
