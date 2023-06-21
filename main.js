@@ -76,7 +76,7 @@ function writeHuettenLayer(jsondata) {
     }).addTo(themaLayer.huetten);
 }
 //Funktion ausführen, indem JSON gefetched wird
-fetch("data/Hütten_Tirol.geojson")
+fetch("data/huetten_tirol_reduced.geojson")
     .then(response => response.json())
     .then(jsondata => {
         writeHuettenLayer(jsondata);
