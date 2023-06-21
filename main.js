@@ -162,3 +162,9 @@ map.on('locationfound', function onLocationFound(evt) {
     circle.setLatLng(evt.latlng);
     circle.setRadius(radius)
 });
+
+
+var gpx = 'data/GPX_hike/aldranser-alm.gpx'; // URL to your GPX file or the GPX itself
+new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
