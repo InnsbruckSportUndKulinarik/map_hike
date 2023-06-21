@@ -22,7 +22,7 @@ let layercontrol = L.control.layers({
     "Esri WorldTopoMap": L.tileLayer.provider("Esri.WorldTopoMap"),
     "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto").addTo(map)
 }, {
-    "Mountainbikerouten": themaLayer.routen,
+    "Wanderrouten": themaLayer.routen,
     "ÖPNV-Bus": themaLayer.stops_bus,
     "ÖPNV-Tram": themaLayer.stops_tram,
     "Hütten": themaLayer.huetten
