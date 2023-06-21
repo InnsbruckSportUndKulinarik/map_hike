@@ -143,3 +143,22 @@ fetch("data/tram_stop_reduced.geojson")
     .catch(error => {
         console.error("Error fetching GeoJSON data:", error);
     });
+
+    // Map locate
+    map.locate({watch:true,maxZoom: 18});
+//FUnktionen für Events Lokalisierung gefunden oder Error message
+map.on('locationerror', function onLocationError(evt) {
+    alert(evt.message);
+});
+
+let circle = L.circle([0,0]).addTo(map);
+let marker = L.marker([0,0]).addTo(map);
+
+map.on('locationfound', function onLocationFound(evt) {
+    console.log(evt)
+    let radius = Math.round(evt.accuracy)
+    marker.setLatLng(evt.latlng)
+    marker.bindTooltip(`You are within ${radius} meters from this point`).openTooltip();
+    circle.setLatLng(evt.latlng);
+    circle.setRadius(radius)
+});
