@@ -105,7 +105,7 @@ function writeBusLayer(jsondata) {
     }).addTo(themaLayer.stops_bus);
 }
 //Funktion ausführen, indem JSON gefetched wird
-fetch("data/bus_stop.geojson")
+fetch("data/bus_stop_reduced.geojson")
     .then(response => response.json())
     .then(jsondata => {
         writeBusLayer(jsondata);
@@ -135,7 +135,7 @@ function writeTramLayer(jsondata) {
     }).addTo(themaLayer.stops_tram);
 }
 //Funktion ausführen, indem JSON gefetched wird
-fetch("data/tram_stop.geojson")
+fetch("data/tram_stop_reduced.geojson")
     .then(response => response.json())
     .then(jsondata => {
         writeTramLayer(jsondata);
