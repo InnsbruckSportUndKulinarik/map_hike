@@ -34,15 +34,26 @@
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
     <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
 
-     <!--Leaflet Marker Cluster-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" integrity="sha512-6ZCLMiYwTeli2rVh3XAPxy3YoR5fVxGdH/pz+KMCzRY2M65Emgkw00Yqmhh8qLGeYQ3LbVZGdmOX9KUjSKr0TA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Leaflet Marker Cluster-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"
+        integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"
+        integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css"
+        integrity="sha512-6ZCLMiYwTeli2rVh3XAPxy3YoR5fVxGdH/pz+KMCzRY2M65Emgkw00Yqmhh8qLGeYQ3LbVZGdmOX9KUjSKr0TA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!--Leaflet Minimap-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js" integrity="sha512-ceQPs2CHke3gSINLt/JV37W1rfJOM64yuH999hnRhTP7tNtcSBp5hlTKhn8CEIhsFweSBrZMPVotAKjoyxGWNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css" integrity="sha512-efbAfGnrnjA+hLwOLu91W034fBGPsMwZMVCTwLUI2PDX/m7rOiuhYZ+D2mZ8rKcpC/I/7pdgoL8T4eYvMHNoQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     
+    <!--Leaflet Minimap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"
+        integrity="sha512-ceQPs2CHke3gSINLt/JV37W1rfJOM64yuH999hnRhTP7tNtcSBp5hlTKhn8CEIhsFweSBrZMPVotAKjoyxGWNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"
+        integrity="sha512-efbAfGnrnjA+hLwOLu91W034fBGPsMwZMVCTwLUI2PDX/m7rOiuhYZ+D2mZ8rKcpC/I/7pdgoL8T4eYvMHNoQg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--Leaflet Rainviewer-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.css" />
     <script src="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.js"></script>
@@ -51,7 +62,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-   
+
 
     <!-- eigene Stile und Hauptskript -->
     <link rel="stylesheet" href="main.css">
@@ -62,28 +73,59 @@
 <body>
     <main>
         <header>
-            <h2><i class="fa-solid fa-person-biking"></i> Wandern rund um Innsbruck</h2>
-            <nav>
-                <i class="fab fa-github"></i> <a href="https://github.com/InnsbruckSportUndKulinarik/map_mtb">Github</a>
-            </nav>
+            <img class="shadow" src="data/hike.jpg" alt="Wandern Innsbruck">
         </header>
-        <article>
-            <p>Auf dieser Karte finden Sie alles, was das Herz eines Wanderes begehrt. Von eher ...... </p>
-            <div id="map"></div>
-            <div id="profile"></div>
+        <nav>
+            <ul>
+                <li><a href="https://innsbrucksportundkulinarik.github.io/Startseite/">Start</a></li>
+                <li>
+                    <a href="https://innsbrucksportundkulinarik.github.io/map_mtb/">Mountainbiketouren</a>
+                    <ul>
+                        <li><a href="https://innsbrucksportundkulinarik.github.io/map_mtb/">ÖPNV ÖBB</a></li>
+                        <li><a href="https://innsbrucksportundkulinarik.github.io/map_mtb/">Sicherheitshinweise</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://innsbrucksportundkulinarik.github.io/map_hike/">Wanderstrecken</a>
+                    <ul>
+                        <li><a href="https://innsbrucksportundkulinarik.github.io/map_hike/#wetter">Bergwetter</a></li>
+                        <li><a href="https://innsbrucksportundkulinarik.github.io/map_hike/#ausrüstung">Ausrüstung</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://innsbrucksportundkulinarik.github.io/Startseite/#impressum">Impressum</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Wandernstrecken rund um Innsbruck</h2>
+<br>
+            <article>
+                <p>
+                    Auf dieser Karte finden Sie alles, was das Herz eines Wanderers begehrt. Von eher gemütlichen
+                    Spaziergängen entlang malerischer Pfade bis hin zu anspruchsvollen Ganztageswanderungen in
+                    atemberaubenden Berglandschaften. Erkunden Sie die vielfältigen Wanderstrecken, die Ihnen
+                    einzigartige
+                    Naturerlebnisse und spektakuläre Aussichten bieten. Egal, ob Sie ein erfahrener Wanderer oder ein
+                    Neuling sind, es gibt für jeden Geschmack und jedes Fitnessniveau die passende Route. Tauchen Sie
+                    ein in
+                    die Schönheit der Natur und lassen Sie sich von den Wanderstrecken auf dieser Karte inspirieren.
+                </p>
+                <div id="map"></div>
+                <div id="profile"></div>
 
-            <h3>Sicherheitshinweise für das Wandern</h3>
-            <p>......</p>
+                <h3 id="wetter">Bergwetter</h3>
+                <p>......</p>
+                <h3 id="ausrüstung">Ausrüstung</h3>
 
-        </article>
+            </article>
+        </main>
         <footer>
             <strong>Datenquellen:</strong>
-            <nav>
+            <div>
                 <a href="https://www.innsbruck.info/radsport/mountainbike/mountainbike-touren.html">Innsbruck Info: MTB
                     Touren</a> |
                 <a href="https://welcome.openstreetmap.org/working-with-osm-data/downloading-and-using/">Open Street Map
                     Daten</a> |
-            </nav>
+            </div>
         </footer>
     </main>
 </body>
