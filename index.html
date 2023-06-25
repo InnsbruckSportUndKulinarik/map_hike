@@ -68,11 +68,11 @@
 </head>
 
 <body>
-    <header>
-        <img class="shadow" src="data/hike.jpg" alt="Wandern in Innsbruck">
-    </header>
+   
     <main>
-
+        <header>
+            <img class="shadow" src="data/hike.jpg" alt="Wandern in Innsbruck">
+        </header>
         <nav>
             <ul>
                 <li><a href="https://innsbrucksportundkulinarik.github.io/Startseite/">Start</a></li>
@@ -145,11 +145,16 @@
                     <li>Wasser und Verpflegung</li>
                     <li>Orientierungshilfen</li>
                     <li>Erste-Hilfe-Set</li>
-                 
+
                 </ol>
                 <hr>
                 <h2 id="wetter">Bergwetter</h2>
-                <p>......</p>
+                <a class="weatherwidget-io" href="https://forecast7.com/de/47d2711d40/innsbruck/"
+                    data-label_1="INNSBRUCK" data-label_2="Wetter" data-theme="original">INNSBRUCK Wetter</a>
+                <script>
+                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                </script><br>
+
 
 
             </article>
