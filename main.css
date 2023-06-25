@@ -1,39 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto';
+    background-color: rgb(234, 234, 234);
+    width: 1024px;
+    margin: auto;
 }
 
 a {
     color: black;
 }
 
-
-
-h2 {
+h1 {
     margin: 0;
     text-align: center;
+    font-family: "Roboto";
 }
 
 
-article {
-    margin-top: 0.5em;
-}
 
 #map {
-    width: 100%;
+    width: 1024px;
     height: 85vh;
     border: 1px solid gray;
-}
-
-footer {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.9em;
-    margin-top: 0.5em;
-}
-
-footer nav {
-    display: inline-block;
 }
 
 .aws-div-icon span{
@@ -52,20 +41,13 @@ footer nav {
 
 /*Bild unter header*/
 header>img {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
-h1 {
-    text-align: center;
-    font-size: xx-large;
-    font-stretch: extra-expanded;
-    font-weight: 800;
-}
 
 main {
-    max-width: 1024px;
+    
     margin: auto;
     margin-top: 40px;
 }
@@ -77,22 +59,20 @@ article p {
     line-height: 1.5em;
 }
 
-article h1,
-article h2,
-article h3 {
-    font-family: 'Roboto';
-}
-
-article figure>img {
-    width: 100%;
-}
-
 .shadow {
     box-shadow:
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
+  /* Impressum */  
+  .inline-list li {
+    display: inline-block;
+    margin-right: 30px;
+    font-family: "Roboto";
+    font-size: smaller;
+  }
+  
 
 /* Stile für das Menüband */
 nav {
