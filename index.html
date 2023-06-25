@@ -62,19 +62,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-
-
     <!-- eigene Stile und Hauptskript -->
     <link rel="stylesheet" href="main.css">
     <script defer src="main.js"></script>
-
 </head>
 
 <body>
+    <header>
+        <img class="shadow" src="data/hike.jpg" alt="Wandern in Innsbruck">
+    </header>
     <main>
-        <header>
-            <img class="shadow" src="data/hike.jpg" alt="Wandern in Innsbruck">
-        </header>
+
         <nav>
             <ul>
                 <li><a href="https://innsbrucksportundkulinarik.github.io/Startseite/">Start</a></li>
@@ -112,7 +110,7 @@
                 </p>
                 <div id="map"></div>
                 <div id="profile"></div>
-               
+
                 <div>Datenquellen:
                     <a href="https://www.innsbruck.info/radsport/mountainbike/mountainbike-touren.html">Innsbruck Info:
                         MTB
@@ -122,12 +120,17 @@
                         Daten</a> |
                 </div><br>
                 <div>
-                    <i class="fab fa-github"></i> <a href="https://github.com/InnsbruckSportUndKulinarik/map_mtb">Github</a>
+                    <i class="fab fa-github"></i> <a
+                        href="https://github.com/InnsbruckSportUndKulinarik/map_mtb">Github</a>
                 </div>
-
+                <h3 id="ausrüstung">Ausrüstung</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5TuoAg87vnQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
                 <h3 id="wetter">Bergwetter</h3>
                 <p>......</p>
-                <h3 id="ausrüstung">Ausrüstung</h3>
+
 
             </article>
         </main>
