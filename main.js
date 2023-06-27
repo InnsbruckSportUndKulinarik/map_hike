@@ -38,6 +38,25 @@ L.control.scale({
 // Mini Map 
 let miniMap = new L.Control.MiniMap(L.tileLayer.provider("OpenStreetMap.DE"), { toggleDisplay: true, minimized: true }).addTo(map);
 
+//Lokalisierungsservice
+map.locate({ watch: true, maxZoom: 18 });
+//Funktionen für Events Lokalisierung gefunden oder Error message
+map.on('locationerror', function onLocationError(evt) {
+    alert(evt.message);
+});
+
+let circle = L.circle([0, 0]).addTo(map);
+let marker = L.marker([0, 0]).addTo(map);
+
+map.on('locationfound', function onLocationFound(evt) {
+    console.log(evt)
+    let radius = Math.round(evt.accuracy)
+    marker.setLatLng(evt.latlng)
+    marker.bindTooltip(`Sie befinden sich in einem Umkreis von ca. ${radius} Meter von diesem Punkt. `).openTooltip();
+    circle.setLatLng(evt.latlng);
+    circle.setRadius(radius)
+});
+
 // Rainviewer Plugin
 L.control.rainviewer({
     position: 'bottomleft',
