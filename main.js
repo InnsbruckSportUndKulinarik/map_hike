@@ -17,15 +17,15 @@ let themaLayer = {
     huetten: L.featureGroup()
 }
 
-// WMTS und Leaflet TileLayerProvider Hintergrundlayer
+// WMTS und Leaflet TileLayerProvider Hintergrundlayer und thematische Layer 
 let layercontrol = L.control.layers({
-    "Esri WorldTopoMap": L.tileLayer.provider("Esri.WorldTopoMap"),
-    "BasemapAT Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto").addTo(map)
+    "Esri WorldTopoMap": L.tileLayer.provider("Esri.WorldTopoMap").addTo(map),
+    "Orthofoto": L.tileLayer.provider("BasemapAT.orthofoto"),
+    "Geländeschummerung": L.tileLayer.provider("BasemapAT.surface")
 }, {
-    "Mountainbikerouten": themaLayer.routen,
-    "ÖPNV-Bus": themaLayer.stops_bus,
-    "ÖPNV-Tram": themaLayer.stops_tram,
-    "Hütten": themaLayer.huetten
+    "ÖPNV-Bus": themaLayer.stops_bus.addTo(map),
+    "ÖPNV-Tram": themaLayer.stops_tram.addTo(map),
+    "Hütten": themaLayer.huetten.addTo(map)
 }).addTo(map)
 
 layercontrol.expand()
