@@ -3,9 +3,14 @@
 body {
     font-family: 'Roboto';
     background-color: rgb(234, 234, 234);
-    width: 1024px;
+    width: 1280px;
     margin: auto;
 }
+
+/* Bild unter header */
+header > img {
+    max-width: 100%;
+  }
 
 a {
     color: black;
@@ -39,15 +44,12 @@ h1 {
 
 
 
-/*Bild unter header*/
-header>img {
-    max-width: 100%;
-    height: auto;
-}
+
+  
 
 
 main {
-    
+    max-width: 1024px;
     margin: auto;
     margin-top: 40px;
 }
