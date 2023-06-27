@@ -94,7 +94,7 @@ function writeHuettenLayer(jsondata) {
         }
     }).addTo(themaLayer.huetten);
 }
-//Funktion ausführen, indem JSON gefetched wird
+//Funktion ausführen, indem JSON gefetched wird (Hütten)
 fetch("data/huetten_tirol_reduced.geojson")
     .then(response => response.json())
     .then(jsondata => {
@@ -103,6 +103,8 @@ fetch("data/huetten_tirol_reduced.geojson")
     .catch(error => {
         console.error("Error fetching GeoJSON data:", error);
     });
+
+
 //Haltestellen (Bus)
 function writeBusLayer(jsondata) {
     L.geoJSON(jsondata, {
@@ -123,7 +125,7 @@ function writeBusLayer(jsondata) {
         }
     }).addTo(themaLayer.stops_bus);
 }
-//Funktion ausführen, indem JSON gefetched wird
+//Funktion ausführen, indem JSON gefetched wird (Bus)
 fetch("data/bus_stop_reduced.geojson")
     .then(response => response.json())
     .then(jsondata => {
@@ -132,8 +134,9 @@ fetch("data/bus_stop_reduced.geojson")
     .catch(error => {
         console.error("Error fetching GeoJSON data:", error);
     });
-// Haltestellen (Tram)
 
+
+// Haltestellen (Tram)
 function writeTramLayer(jsondata) {
     L.geoJSON(jsondata, {
         pointToLayer: function (feature, latlng) {
@@ -153,7 +156,8 @@ function writeTramLayer(jsondata) {
         }
     }).addTo(themaLayer.stops_tram);
 }
-//Funktion ausführen, indem JSON gefetched wird
+
+//Funktion ausführen, indem JSON gefetched wird (Tram)
 fetch("data/tram_stop_reduced.geojson")
     .then(response => response.json())
     .then(jsondata => {
@@ -163,6 +167,8 @@ fetch("data/tram_stop_reduced.geojson")
         console.error("Error fetching GeoJSON data:", error);
     });
 
+
+    
 let gpxfiles = ['data/GPX_hike/aldranser-alm.gpx', 'data/GPX_hike/adlerweg-etappe-14-innsbruck--solsteinhaus.gpx','data/GPX_hike/adlerweg-etappe-13-innsbruck--zirbenweg--innsbruck.gpx', 'data/GPX_hike/almenweg-1600-fuenf-almen-am-patscherkofel,gpx','data/GPX_hike/almtour-birgitzkoepflhaus-muttereralm-goetzner-alm-birgitzeralm','data/GPX_hike/almtour-birgitzkoepflhaus-muttereralm-goetzner-alm-birgitzeralm.gpx','data/GPX_hike/alpenrosensteig-14a-rundwanderung.gpx','data/GPX_hike/arzler-alm-rumer-alm-enzian-huette','data/GPX_hike/arzler-alm-rumer-alm-enzian-huette','data/GPX_hike/arzler-alm-rumer-alm-enzian-huette.gpx','data/GPX_hike/arzler-alm-rumer-alm-enzian-huette.gpx','data/GPX_hike/axamer-lizum-zum-halsl-und-weiter-zur-sailenockspitze','data/GPX_hike/bergheim-fotsch-schmalzgrube-sellrain16.gpx','data/GPX_hike/faltegartenkoepfl.gpx','data/GPX_hike/geisterwanderweg-oberperfuss.gpx','data/GPX_hike/hungerburg-brandjochkreuz-sadrach.gpx','data/GPX_hike/hungerburg-gramart-hoettingerbild','data/GPX_hike/inntaler-hoehenweg-etappe-1.gpx','data/GPX_hike/juifenalm-25.gpx','data/GPX_hike/praxmar-westfalenhaus-33.gpx','data/GPX_hike/rum-thaurer-alm-rumer-alm.gpx','data/GPX_hike/sellrainer-huettenrunde-3.-etappe.gpx','data/GPX_hike/sellrain-potsdamer-huette.gpx','data/GPX_hike/sellraintaler-hoehenwanderweg.gpx','data/GPX_hike/st.-sigmund-pforzheimer-huette-145.gpx','data/GPX_hike/wanderung-ueber-die-arzler-alm-zur-hoettinger-alm.gpx','data/GPX_hike/wanderung-zum-rauschbrunnen.gpx','data/GPX_hike/wendelinsteig-714-bis-rechenhof-und-schoenblick.gpx','data/GPX_hike/Mutters-Kreitheralm-Kreith.gpx','data/GPX_hike/wandertour-am-patscherkofel-sistranser-alm-und-almgasthaus-b.gpx','data/GPX_hike/rundwandertour-auf-den-patscherkofel.gpx'];
 
 gpxfiles.forEach(function(gpxFile) {
