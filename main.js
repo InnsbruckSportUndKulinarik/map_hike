@@ -223,7 +223,11 @@ let colors = [
     'darkred',
     'brown',
     'darkblue',
-    'red'
+    'gold',
+    'silver',
+    'navy',
+    'teal',
+    'maroon'
 ];
 
 
