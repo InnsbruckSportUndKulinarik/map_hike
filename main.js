@@ -227,18 +227,31 @@ let colors = [
 ];
 
 
-gpxfiles.forEach(function (gpxFile) {
-    new L.GPX(gpxFile, { async: true }).on('loaded', function (e) {
-        map.fitBounds(e.target.getBounds());
-    }).addTo(map);
-});
-
-// Load each GPX file separately
-gpxFiles.forEach((gpxFile) => {
-    const gpxFilePath = path.join(gpxDirectory, gpxFile);
-    new L.GPX(gpxFilePath, { async: true }).on('loaded', (e) => {
+//Tracks in der Karte anzeigen, Marker beim Startpunkt und bei Wegpunkten hinzufügen, Höhenprofil bei Klicken anzeigen, Namen und weitere Informationen in Popup beim Klicken anzeigen 
+gpxfiles.forEach((gpxFile, index) => {
+    new L.GPX(gpxFile, {
+        async: true,
+        polyline_options: {
+            color: colors[index % colors.length],
+        },
+        marker_options: {
+            startIconUrl: 'icons/start.png', // change start marker
+            endIconUrl: '', // Remove end marker
+            shadowUrl: '',// Remove shadow marker
+            wptIconUrls: {
+                '': 'icons/location.png'
+            }, // add marker for way points
+        }
+    }).on('click', function (event) {
+        controlElevation.load(gpxFile);
+        controlElevation.clear();
+    }).addTo(map).on('click', function (e) {
         const gpxLayer = e.target;
-        map.fitBounds(gpxLayer.getBounds());
-        gpxLayer.addTo(map);
+        let name = gpxLayer.get_name();
+        let gpx_path = gpxFile;
+        let website = 'https://www.innsbruck.info/radsport/mountainbike/mountainbike-touren/touren/' + gpx_path.replace(/^.*\/|\.gpx$/g, "") + '.html';
+        let firstLayer = gpxLayer.getLayers()[0];
+        firstLayer.bindPopup(`<b>${name}</b><br> <a href=${website} target="_blank">Weitere Informationen</a>`
+        ).openPopup()
     });
 });
