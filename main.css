@@ -88,7 +88,7 @@ footer {
 /* Stile für das Menüband */
 nav {
     background-color: #333;
-    padding: 10px;
+    padding: 16px;
 }
 
 nav ul {
@@ -104,8 +104,9 @@ nav ul li {
 
 nav ul li a {
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
+    font-size: 22px;
 }
 
 nav ul li:hover>a {
@@ -116,41 +117,33 @@ nav ul li:hover>a {
 nav ul li ul {
     position: absolute;
     background-color: #333;
-    top: 100%;
-    left: 3px;
-    width: 200px;
-    /* Anpassen der Breite */
-    height: 0;
-    /* Anpassen der Höhe */
-    overflow: hidden;
-    /* Ausblenden des Inhalts */
-    transition: height 0.3s ease;
-    /* Animierter Übergang der Höhe */
-    display: flex;
-    /* Hinzufügen der flex-Eigenschaft */
-    flex-direction: column;
-    /* Anordnung der Elemente in Spalten */
-    justify-content: space-between;
-    /* Gleichmäßige Verteilung der Elemente */
-}
-
-nav ul li:hover>ul {
-    height: auto;
-    /* Dropdown-Menü anzeigen beim Hovern */
-    transition: height 0.3s ease;
-    /* Animierter Übergang der Höhe */
-}
-
-nav ul li ul li {
+    top: 40px;
+    left: 5px;
+    width: 200px; /* Anpassen der Breite */
+    height: 0; /* Anpassen der Höhe */
+    overflow: hidden; /* Ausblenden des Inhalts */
+    display: flex; /* Hinzufügen der flex-Eigenschaft */
+    flex-direction: column; /* Anordnung der Elemente in Spalten */
+    justify-content: space-between; /* Gleichmäßige Verteilung der Elemente */
+  }
+  
+  nav ul li:hover > ul {
+    height: auto; /* Dropdown-Menü anzeigen beim Hovern */
+    transition: height 0.3s ease; /* Animierter Übergang der Höhe */
+  }
+  
+  nav ul li ul li {
     display: block;
-}
+  }
 
-nav ul li ul li a:hover {
-    background-color: #555;
-    padding: 5px 10px;
-    /* Anpassen des Padding */
-    margin: 5px;
-    /* Anpassen des Margin */
-    line-height: 2;
-    /* Anpassen des Zeilenabstands */
+  nav ul li ul li a {
+    font-size: 16px; /* Kleinere Schriftgröße für die Menüpunkte im Dropdown-Menü */
+    line-height: 1.5;
 }
+  
+  nav ul li ul li a:hover {
+    background-color: #555;
+    padding: 5px 10px; /* Anpassen des Padding */
+    margin: 5px; /* Anpassen des Margin */
+    line-height: 2; /* Anpassen des Zeilenabstands */
+  }
