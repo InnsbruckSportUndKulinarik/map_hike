@@ -8,9 +8,9 @@ body {
 }
 
 /* Bild unter header */
-header > img {
+header>img {
     max-width: 100%;
-  }
+}
 
 a {
     color: black;
@@ -30,23 +30,17 @@ h1 {
     border: 1px solid gray;
 }
 
-.aws-div-icon span{
-    font-size:1.25em;
-    font-weight:bold;
-    padding:0.3em;
-    border:1px solid silver;
+.aws-div-icon span {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 0.3em;
+    border: 1px solid silver;
     text-shadow:
-    -1px -1px 0 white,
-    -1px 1px 0 white,
-    1px -1px 0 white,
-    1px 1px 0 white,
+        -1px -1px 0 white,
+        -1px 1px 0 white,
+        1px -1px 0 white,
+        1px 1px 0 white,
 }
-
-
-
-
-  
-
 
 main {
     max-width: 1024px;
@@ -67,14 +61,29 @@ article p {
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
-  /* Impressum */  
-  .inline-list li {
-    display: inline-block;
+
+/* Impressum */
+footer {
+    text-align: center;
+}
+
+#impressum {
+    font-weight: bold;
+}
+
+.inline-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.inline-list li {
     margin-right: 30px;
     font-family: "Roboto";
     font-size: smaller;
-  }
-  
+}
+
 
 /* Stile für das Menüband */
 nav {
@@ -109,27 +118,39 @@ nav ul li ul {
     background-color: #333;
     top: 100%;
     left: 3px;
-    width: 200px; /* Anpassen der Breite */
-    height: 0; /* Anpassen der Höhe */
-    overflow: hidden; /* Ausblenden des Inhalts */
-    transition: height 0.3s ease; /* Animierter Übergang der Höhe */
-    display: flex; /* Hinzufügen der flex-Eigenschaft */
-    flex-direction: column; /* Anordnung der Elemente in Spalten */
-    justify-content: space-between; /* Gleichmäßige Verteilung der Elemente */
-  }
-  
-  nav ul li:hover > ul {
-    height: auto; /* Dropdown-Menü anzeigen beim Hovern */
-    transition: height 0.3s ease; /* Animierter Übergang der Höhe */
-  }
-  
-  nav ul li ul li {
+    width: 200px;
+    /* Anpassen der Breite */
+    height: 0;
+    /* Anpassen der Höhe */
+    overflow: hidden;
+    /* Ausblenden des Inhalts */
+    transition: height 0.3s ease;
+    /* Animierter Übergang der Höhe */
+    display: flex;
+    /* Hinzufügen der flex-Eigenschaft */
+    flex-direction: column;
+    /* Anordnung der Elemente in Spalten */
+    justify-content: space-between;
+    /* Gleichmäßige Verteilung der Elemente */
+}
+
+nav ul li:hover>ul {
+    height: auto;
+    /* Dropdown-Menü anzeigen beim Hovern */
+    transition: height 0.3s ease;
+    /* Animierter Übergang der Höhe */
+}
+
+nav ul li ul li {
     display: block;
-  }
-  
-  nav ul li ul li a:hover {
+}
+
+nav ul li ul li a:hover {
     background-color: #555;
-    padding: 5px 10px; /* Anpassen des Padding */
-    margin: 5px; /* Anpassen des Margin */
-    line-height: 2; /* Anpassen des Zeilenabstands */
-  }
+    padding: 5px 10px;
+    /* Anpassen des Padding */
+    margin: 5px;
+    /* Anpassen des Margin */
+    line-height: 2;
+    /* Anpassen des Zeilenabstands */
+}
