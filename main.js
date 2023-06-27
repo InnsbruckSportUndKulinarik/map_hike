@@ -208,6 +208,25 @@ let gpxfiles = [
     'data/GPX_hike/rundwandertour-auf-den-patscherkofel.gpx'
 ];
 
+//Farben für Tracks
+let colors = [
+    'red',
+    'blue',
+    'green',
+    'orange',
+    'purple',
+    'yellow',
+    'pink',
+    'black',
+    'darkgreen',
+    'lightblue',
+    'darkred',
+    'brown',
+    'darkblue',
+    'red'
+];
+
+
 gpxfiles.forEach(function (gpxFile) {
     new L.GPX(gpxFile, { async: true }).on('loaded', function (e) {
         map.fitBounds(e.target.getBounds());
