@@ -101,19 +101,24 @@ nav ul li:hover>a {
     background-color: #555;
 }
 
-  /* Dropdown-Menüs */
-  nav ul li ul {
-    display: none;
+/* Dropdown-Menüs */
+nav ul li ul {
     position: absolute;
     background-color: #333;
     top: 100%;
     left: 3px;
-    bottom: -240%;
+    width: 200px; /* Anpassen der Breite */
+    height: 0; /* Anpassen der Höhe */
+    overflow: hidden; /* Ausblenden des Inhalts */
+    transition: height 0.3s ease; /* Animierter Übergang der Höhe */
+    display: flex; /* Hinzufügen der flex-Eigenschaft */
+    flex-direction: column; /* Anordnung der Elemente in Spalten */
+    justify-content: space-between; /* Gleichmäßige Verteilung der Elemente */
   }
   
   nav ul li:hover > ul {
-    display: inherit;
-    top: auto;
+    height: auto; /* Dropdown-Menü anzeigen beim Hovern */
+    transition: height 0.3s ease; /* Animierter Übergang der Höhe */
   }
   
   nav ul li ul li {
@@ -122,4 +127,7 @@ nav ul li:hover>a {
   
   nav ul li ul li a:hover {
     background-color: #555;
+    padding: 5px 10px; /* Anpassen des Padding */
+    margin: 5px; /* Anpassen des Margin */
+    line-height: 2; /* Anpassen des Zeilenabstands */
   }
